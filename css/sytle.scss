@@ -111,10 +111,29 @@
           margin-left:20px;
         }
       }
-
-      }
-      
-    
-    
     }
+  
+    
+  }
+  
+  
+  
+}
+
+
+
+
+// 왜 여기서 부터 적용이 안될까?
+// 잘못된 scope에 넣은 줄 알고 새로 만들었는데도 안됨
+// 개발자 도구 보니끼 div:nth-child(3)의 높이 값이 인식이 안되는데
+#container>div:nth-child(3){
+  width:1920px;
+  height:300px;
+  
+  // @include display(space-around);
+
+  // &>div{
+  //   width:25%;
+  //   height:80%;
+  // }
 }
