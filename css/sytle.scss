@@ -1,5 +1,11 @@
 *{margin:0; padding:0; box-sizing: border-box;}
 
+@mixin position ($left, $top){
+  position: relative;
+  left: ($left);
+  top:($top);
+}
+
 @mixin display ($jus) {
   display: flex;
   justify-content: ($jus);
@@ -7,6 +13,7 @@
 }
 // @mixin 효과를 까먹어서 찾느라고 한찬을 해맴 
 // 꼭 많이써서 손에 익혀둘것
+
 
 
 #container{
@@ -24,6 +31,7 @@
     width:1920px;
     height:100px;
     @include display(start);
+
     
     &>div:nth-child(1){
       width:200px;
@@ -34,6 +42,31 @@
     
     
   }
+  
+  &>div:nth-child(2){
+
+    
+    &>div:nth-child(1 or 2 or 3){
+      width:500px;
+      height:300px;
+      // @include position(*10px, &*40px);
+      // div:nth-child(-n+3)에서 -n+3을 변수로 이용해서 position의 자리배치를 덧셈으로 한번에 주는 방법은 없을까?
+      // --> 일단 @include를 넣어서 인수를 쓸수 있게 한 다음에 인수자리에 수식을 넣어봄
+      // --> 수식에 쓰는 -n+3이 변수로 인식되지 않는것 같음 
+      // --> 따로 -n+3을 의미하는 기호를 약속으로 정해서 쓸수는 없을까? 
+      // 예시) div:nth-child(-n+3)에서 -n+3=$a 로 표현 
+      // --> div:nth-child($a)   와   @include position { $a*10px, $a*40px}
+      // 이런식으로 수식을 사용해서 표현할 수는 없을까?
+      // 오늘 배운 자바스크립트로 해결할수 있을거같다
+      // 미션 : javascript로 이 문제를 해결할 수 있을까 고민해보기
+      // 일단 지금은 다 따로 지정 해놓고 다음으로 넘어가자
+    }
+    
+    
+    
+    
+  }
+  
   
   
 }
