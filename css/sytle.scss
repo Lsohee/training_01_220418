@@ -1,4 +1,14 @@
 *{margin:0; padding:0; box-sizing: border-box;}
+
+@mixin display ($jus) {
+  display: flex;
+  justify-content: ($jus);
+  align-items: center;
+}
+// @mixin 효과를 까먹어서 찾느라고 한찬을 해맴 
+// 꼭 많이써서 손에 익혀둘것
+
+
 #container{
   width:1920px;
   height:1080px;
@@ -8,14 +18,14 @@
     border:1px solid black;
   }
   
+  
 
   &>div:nth-child(1){
     width:1920px;
     height:200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display(space-around);
     
+
 
     &>div:nth-child(1){
       width:400px;
