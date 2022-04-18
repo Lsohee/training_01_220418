@@ -17,20 +17,22 @@
 
 #container > div:nth-child(1) {
   width: 1920px;
-  height: 200px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 #container > div:nth-child(1) > div:nth-child(1) {
-  width: 400px;
-  height: 180px;
+  width: 200px;
+  height: 80px;
   background-color: gray;
+  margin: 10px;
 }
 /*# sourceMappingURL=sytle.css.map */

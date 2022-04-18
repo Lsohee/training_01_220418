@@ -22,16 +22,14 @@
 
   &>div:nth-child(1){
     width:1920px;
-    height:200px;
-    @include display(space-around);
+    height:100px;
+    @include display(start);
     
-
-
     &>div:nth-child(1){
-      width:400px;
-      height:180px;
+      width:200px;
+      height:80px;
       background-color: gray;
-      
+      margin: 10px;
     }
     
     
